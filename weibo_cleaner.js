@@ -10,10 +10,18 @@
 // ==/UserScript==
 
 var clean_background = function(){
-  $("body").css("background", "transparent");
-  
+    $("body").css("background", "transparent");
+    $(".WB_global_nav").css("background", "transparent");
+    // Align the top nav-bar
+    $(".W_miniblog").css("padding-top","41px");
+    // All AD class
+    $(".sinaads").css("display", "none");
+    // Right side AD
+    $(".content .adver_contB").css("display","none");
+    // Recommend weibo
+    $("div[node-type='feed_spread']").hide();
 };
- 
+
 $(document).ready(function() {
     clean_background();
 });
